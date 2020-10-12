@@ -1,44 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Para subir este frontend siga as instruções abaixo:
 
-## Available Scripts
+## Tenha o docker instalado e o repositório clonado.
 
-In the project directory, you can run:
+### Primeiro baixe o backend e suba os servidores veja como no link abaixo:
 
-### `npm start`
+https://github.com/robsoninocencio/becomex-desafio-backend
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Execute:
+```
+docker-compose up -d
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Se fizer alterações no código e quiser ver suas alterações funcionando execute:
+```
+docker-compose up -d --build
+```
 
-### `npm test`
+## Acessar no browser as rotas:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+http://localhost:3000
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Para baixar o servidor ao terminar os testes execute:
+```
+docker-compose down
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Descriçãod o projeto:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Este projeto é um frontend que sobe um servidor nginx rodando uma aplicação react feita com typescript.
+O projeto exibe uma lista de países que ao clicar traz mais detalhes do pais clicado. O objetivo deste projeto é que essa lista é carregada via chamada a uma api que funciona como um cache em Redis da Api original.
