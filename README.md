@@ -26,7 +26,7 @@ http://localhost:3000
 docker-compose down
 ```
 
-## Descriçãod o projeto:
+## Descrição do projeto:
 
 Este projeto é um frontend que sobe um servidor nginx rodando uma aplicação react feita com typescript.
 O projeto exibe uma lista de países que ao clicar traz mais detalhes do pais clicado. O objetivo deste projeto é que essa lista é carregada via chamada a uma api que funciona como um cache em Redis da Api original.
